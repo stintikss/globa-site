@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEF0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    align-items: center;  /* Ensures vertical alignment of both image and text */
+}
+
+
+.header_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Ensures text is vertically centered */
+}
+
+.about {
+    margin-left: 5px;
+}
+
+.header_title p {
+
+    cursor: pointer;
+}
+
+
+.header_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.header_title p {
+    margin: 0;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #000;
+}
+
+.header_title p:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+
+.header_title p:not(.about):hover {
+    color: #e74c3c; /* Цвет для остальных пунктов */
+}
+
+.active {
+    color: #3498db;  /* Цвет активной страницы (голубой) */
+    font-weight: bold;
+    text-decoration: underline; /* Подчеркивание активного элемента */
+}
+
+.header_title a {
+    text-decoration: none;
+}
+
+/* style.css */
+
+/* Выделяем активную ссылку */
+a.active p {
+    color: #ff6600; /* Цвет для активной ссылки */
+    font-weight: bold; /* Сделать текст жирным */
+}
+
+/* Можно добавить дополнительные стили для активных ссылок */
+a.active p:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
