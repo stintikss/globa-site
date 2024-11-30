@@ -142,10 +142,68 @@ body, header {
 
 @media (max-width: 460px) {
     .header_title p {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .header_title {
-        height: 55px;
+        height: 20px;
     }
+}
+
+@media (max-width: 391px) {
+    .header_title p {
+        font-size: 10px;
+    }
+
+    .header_title {
+        height: 20px;
+    }
+}
+
+
+
+.about-me {
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+
+.buttonmm {
+    padding: 10px;
+    background-color: rgb(112, 112, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    opacity: 0; /* Начальная прозрачность для анимации */
+    transform: translateY(-20px); /* Смещение кнопки вверх перед анимацией */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавные анимации */
+}
+
+.buttonmm.show {
+    opacity: 1;
+    transform: translateY(0); /* Восстановление нормального положения */
+}
+
+/* Анимация скрытия кнопки */
+.buttonmm.hide {
+    opacity: 0;
+    transform: translateY(-20px); /* Сдвигаем кнопку вверх */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавное исчезновение */
+}
+
+/* Стили для текста под кнопкой */
+.button-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }

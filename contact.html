@@ -1,20 +1,102 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Связаться с нами</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header> <!-- Здесь будет вставлена шапка -->
+    <header></header> 
     
     <main>
-        <h1>Связь</h1>
-        <p>Добро пожаловать на главную страницу!</p>
+        <div class="about-me">
+            <p id="text1">GitHub</p>
+            <p id="text2">Telegram</p>
+            <p id="text3">Kwork</p>
+        </div>
     </main>
+    <script>
+        // Функция для создания кнопки и добавления ее под текст с анимацией
+        function toggleButton(textId) {
+            // Сначала находим все кнопки и скрываем их с анимацией
+            const allButtons = document.querySelectorAll('.buttonmm');
+            allButtons.forEach(button => {
+                button.classList.add('hide');  // Добавляем класс скрытия для анимации
+                button.addEventListener('transitionend', function() {
+                    button.remove();  // Удаляем кнопку после завершения анимации
+                });
+            });
+    
+            // Проверяем, существует ли уже кнопка для этого текста
+            const existingButton = document.getElementById(`buttonmm-${textId}`);
+            
+            if (!existingButton) {
+                // Если кнопки нет, создаем новую
+                const button = document.createElement('button');
+                button.id = `buttonmm-${textId}`;  // Устанавливаем id для кнопки
+                button.classList.add('buttonmm');  // Добавляем класс для стилизации
+    
+                // Добавляем текст и ссылку в зависимости от id
+                let link;
+                let buttonText;
+                let descriptionText;
+    
+                if (textId === 'text1') {
+                    buttonText = 'Перейти на GitHub';
+                    link = 'https://github.com/stintikss'; // Ссылка на GitHub
+                } else if (textId === 'text2') {
+                    buttonText = 'Перейти в Telegram';
+                    link = 'https://t.me/mefistofefel'; // Ссылка на Telegram
+                } else if (textId === 'text3') {
+                    buttonText = 'Перейти на Kwork';
+                    link = 'https://kwork.ru/user/stintikss'; // Ссылка на Kwork
+                    descriptionText = 'Мой профиль на Kwork'; // Текст под кнопкой для Kwork
+                }
+    
+                button.textContent = buttonText;
+    
+                // Создаем элемент <a> с атрибутом target="_blank"
+                const anchor = document.createElement('a');
+                anchor.href = link; // Привязываем ссылку
+                anchor.target = '_blank'; // Открываем в новом окне
+                anchor.appendChild(button); // Вкладываем кнопку в ссылку
+    
+                // Если это Kwork, добавляем описание
+                if (textId === 'text3') {
+                    const description = document.createElement('p');
+                    description.classList.add('button-text'); // Добавляем класс для стилизации
+                    description.textContent = descriptionText; // Текст под кнопкой для Kwork
+                    anchor.insertAdjacentElement('afterend', description); // Вставляем текст под кнопкой
+                    console.log("Description added:", descriptionText);  // Логирование
+                }
+    
+                const textElement = document.getElementById(textId); // Находим текстовый элемент
+                textElement.insertAdjacentElement('afterend', anchor); // Вставляем ссылку с кнопкой под текст
+                console.log(`Button for ${textId} added!`);  // Логирование
+    
+                // Анимация появления кнопки
+                setTimeout(() => {
+                    button.classList.add('show');
+                }, 10);  // Немного задержим, чтобы анимация начала работать
+            }
+        }
+    
+        // Добавляем обработчики событий для каждого текста
+        document.getElementById('text1').addEventListener('click', function() {
+            toggleButton('text1');
+        });
+    
+        document.getElementById('text2').addEventListener('click', function() {
+            toggleButton('text2');
+        });
+    
+        document.getElementById('text3').addEventListener('click', function() {
+            toggleButton('text3');
+        });
+    </script>
 
-    <script src="header.js"></script> <!-- Подключаем JavaScript файл -->
+    <script src="header.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>

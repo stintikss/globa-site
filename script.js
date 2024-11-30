@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Устанавливаем иконку
     if (body.classList.contains('dark-theme')) {
-        themeIcon.src = 'icons8-луна-200.png';
+        themeIcon.src = 'icons8-солнце-200 (1).png';
     } else {
         themeIcon.src = 'icons8-солнце-200.png';
     }
