@@ -12,25 +12,8 @@ header {
     box-sizing: border-box;
     overflow: hidden;
     background-color: #FFFFFF;
-    align-items: center;  /* Ensures vertical alignment of both image and text */
+    align-items: center;
 }
-
-
-.header_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* Ensures text is vertically centered */
-}
-
-.about {
-    margin-left: 5px;
-}
-
-.header_title p {
-
-    cursor: pointer;
-}
-
 
 .header_title {
     display: flex;
@@ -59,30 +42,21 @@ header {
     transform: scale(1.1);
 }
 
-
 .header_title p:not(.about):hover {
-    color: #e74c3c; /* Цвет для остальных пунктов */
+    color: #e74c3c;
 }
 
-.active {
-    color: #3498db;  /* Цвет активной страницы (голубой) */
-    font-weight: bold;
-    text-decoration: underline; /* Подчеркивание активного элемента */
-}
-
-.header_title a {
-    text-decoration: none;
-}
-
-/* style.css */
-
-/* Выделяем активную ссылку */
 a.active p {
     color: #ff6600; /* Цвет для активной ссылки */
     font-weight: bold; /* Сделать текст жирным */
+    text-decoration: underline; /* Подчеркивание активного элемента */
 }
 
-/* Можно добавить дополнительные стили для активных ссылок */
 a.active p:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Свечение для активной ссылки */
+a.active p {
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.8); /* Добавляем свечение */
 }
