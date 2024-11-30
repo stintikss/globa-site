@@ -1,16 +1,22 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Шаблон шапки с правильными путями
     const headerHTML = `
         <div class="header_title">
-            <a href="/globa-site/index.html" id="home">
-                <p>Главная</p>
+             <a href="/globa-site/index.html" id="home">
+               <p>Главная</p>
             </a>
-            <a href="/globa-site/about.html" id="about">
-                <p class="about">О нас</p>
-            </a>
-            <a href="/globa-site/contact.html" id="contact">
-                <p>Связаться с нами</p>
-            </a>
+             <a href="/globa-site/about.html" id="about">
+              <p class="about">О нас</p>
+           </a>
+           <a href="/globa-site/contact.html" id="contact">
+               <p>Связаться с нами</p>
+           </a>
+       </div>
+
+        <div class='block_image_header'>
+            <img id='header_ico_theme' src="icons8-солнце-200.png" alt="">
         </div>
     `;
 
