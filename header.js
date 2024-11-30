@@ -1,15 +1,14 @@
-// header.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Шаблон шапки
+    // Шаблон шапки с правильными путями для GitHub Pages
     const headerHTML = `
         <div class="header_title">
-            <a href="index.html" id="home">
+            <a href="/globa-site/index.html" id="home">
                 <p>Главная</p>
             </a>
-            <a href="about.html" id="about">
+            <a href="/globa-site/about.html" id="about">
                 <p class="about">О нас</p>
             </a>
-            <a href="contact.html" id="contact">
+            <a href="/globa-site/contact.html" id="contact">
                 <p>Связаться с нами</p>
             </a>
         </div>
