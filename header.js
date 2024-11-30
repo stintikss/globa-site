@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Шаблон шапки с правильными путями
     const headerHTML = `
@@ -24,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerElement = document.querySelector('header');
     if (headerElement) {
         headerElement.innerHTML = headerHTML;
+
+        // Запускаем анимацию через небольшой таймаут
+        setTimeout(() => {
+            headerElement.classList.add('animate');
+        }, 100); // Задержка для срабатывания transition
     }
 
     // Выделяем активную ссылку
