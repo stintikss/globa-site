@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Шаблон шапки с правильными путями для GitHub Pages
+    // Шаблон шапки с правильными путями
     const headerHTML = `
         <div class="header_title">
             <a href="/globa-site/index.html" id="home">
@@ -22,10 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Выделяем активную ссылку
     const links = document.querySelectorAll('.header_title a');
-    const currentPath = window.location.pathname; // Получаем текущий путь
+    const currentPath = window.location.pathname.split('/').pop(); // Получаем текущий файл
 
     links.forEach(link => {
-        if (link.getAttribute('href') === currentPath.split('/').pop()) {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        if (linkPath === currentPath) {
             link.classList.add('active');
         }
     });
