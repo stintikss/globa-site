@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Шаблон шапки
     const headerHTML = `
         <div class="header_title">
-            <a href="/index.html" id="home">
+            <a href="index.html" id="home">
                 <p>Главная</p>
             </a>
-            <a href="/about.html" id="about">
+            <a href="about.html" id="about">
                 <p class="about">О нас</p>
             </a>
-            <a href="/contact.html" id="contact">
+            <a href="contact.html" id="contact">
                 <p>Связаться с нами</p>
             </a>
         </div>
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname; // Получаем текущий путь
 
     links.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
+        if (link.getAttribute('href') === currentPath.split('/').pop()) {
             link.classList.add('active');
         }
     });
