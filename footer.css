@@ -135,7 +135,7 @@ main {
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* @media (max-width: 540px) and (min-width: 451px) {
