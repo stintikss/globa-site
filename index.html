@@ -1,23 +1,161 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>Отзывы и Мои Работы</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
     <script src="yandex-metrika.js"></script>
 </head>
 <body>
-    <header>
-    </header> <!-- Здесь будет вставлена шапка -->
-    
-    <main>
-        <h1>Главная</h1>
-        <p>Здесь будет информация о вашей компании или странице "О нас".</p>
-    </main>
+    <header></header>
+    <main class="main_content">
+        <!-- Приветственный текст -->
+        <section class="welcome-section">
+            <h1>Добро пожаловать!</h1>
+            <div class="welcome-text">
+                <p>
+                    Мы гордимся своей работой и рады поделиться с вами результатами наших проектов и отзывами клиентов. 
+                </p>
+                <p>
+                    Здесь вы найдете примеры моих навыков, завершенные работы и впечатления людей, которые доверили нам свои идеи. 
+                </p>
+                <p>
+                    Оцените наш профессионализм и вдохновение. 
+                </p>
+                <p>
+                    Нажмите на кнопку ниже, чтобы открыть больше информации!
+                </p>
+            </div>
+            <button class="show-content-button" onclick="showContent()">Посмотреть отзывы и работы</button>
+        </section>
+        
 
-    <script src="header.js"></script> <!-- Подключаем JavaScript файл -->
+        <!-- Контент с отзывами и работами -->
+        <section class="content-wrapper hidden" id="content-wrapper">
+            <!-- Блок отзывов -->
+            <section class="reviews">
+                <div class="grid-title">
+                    <h2 class="reviewss1">Отзывы</h2>
+                </div>
+                <div class="review review1">
+                    <img src="Снимок экрана 2024-12-04 в 21.04.29.png" alt="avatar" class="avatar">
+                    <div class="review-content">
+                        <div class="review-header">
+                            <span class="reviewer-name">Артем Суслов</span>
+                        </div>
+                        <hr class="divider">
+                        <p class="review-text">Очень хороший сервис, мне понравилось! Всем рекомендую.</p>
+                        <div class="review-footer">
+                            <span class="review-date">05.12.2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review review2">
+                    <img src="Снимок экрана 2024-12-14 в 20.01.12.png" alt="avatar" class="avatar">
+                    <div class="review-content">
+                        <div class="review-header">
+                            <span class="reviewer-name">Мария Иванова</span>
+                        </div>
+                        <hr class="divider">
+                        <p class="review-text">Потрясающая работа! Всё было выполнено качественно и в срок.</p>
+                        <div class="review-footer">
+                            <span class="review-date">03.12.2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review review3">
+                    <img src="image copy 2.png" alt="avatar" class="avatar">
+                    <div class="review-content">
+                        <div class="review-header">
+                            <span class="reviewer-name">Дмитрий Петров</span>
+                        </div>
+                        <hr class="divider">
+                        <p class="review-text">Очень профессиональный подход. Я доволен результатом!</p>
+                        <div class="review-footer">
+                            <span class="review-date">02.12.2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review review4">
+                    <img src="Снимок экрана 2024-12-14 в 20.02.13.png" alt="avatar" class="avatar">
+                    <div class="review-content">
+                        <div class="review-header">
+                            <span class="reviewer-name">Екатерина Смирнова</span>
+                        </div>
+                        <hr class="divider">
+                        <p class="review-text">Спасибо за отличный сервис! Всё на высшем уровне.</p>
+                        <div class="review-footer">
+                            <span class="review-date">01.12.2024</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-button">Все отзывы</button>
+            </section>
+
+            <!-- Блок моих работ -->
+            <section class="portfolio">
+                <h2 class="portfolio-title">Мои работы</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="work1.png" alt="Моя работа 1">
+                        <p>Проект 1: Сайт для бизнеса</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work2.png" alt="Моя работа 2">
+                        <p>Проект 2: Интернет-магазин</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work3.png" alt="Моя работа 3">
+                        <p>Проект 3: Портфолио-дизайн</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work4.png" alt="Моя работа 4">
+                        <p>Проект 4: Блог платформа</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work4.png" alt="Моя работа 4">
+                        <p>Проект 4: Блог платформа</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work4.png" alt="Моя работа 4">
+                        <p>Проект 4: Блог платформа</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work4.png" alt="Моя работа 4">
+                        <p>Проект 4: Блог платформа</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="work4.png" alt="Моя работа 4">
+                        <p>Проект 4: Блог платформа</p>
+                    </div>
+                    
+                </div>
+                <button class="view-all-button">Все работы</button>
+            </section>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="header.js"></script>
     <script src="script.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        function showContent() {
+            const welcomeSection = document.querySelector('.welcome-section');
+            const contentWrapper = document.querySelector('#content-wrapper');
+            
+            welcomeSection.style.transition = "opacity 0.5s ease";
+            contentWrapper.style.transition = "opacity 0.5s ease";
+
+            welcomeSection.style.opacity = 0;
+            setTimeout(() => {
+                welcomeSection.style.display = "none";
+                contentWrapper.style.opacity = 1;
+                contentWrapper.classList.remove('hidden');
+            }, 500);
+        }
+    </script>
 </body>
 </html>

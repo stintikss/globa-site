@@ -1,0 +1,222 @@
+/* Общий стиль для футера */
+footer {
+    background: #2C2C2C;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 619px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f1c40f;
+}
+
+.footer-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.footer-form button {
+    background: #f1c40f;
+    color: #2C2C2C;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+    background: #e2b007;
+}
+
+.social {
+    display: flex;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    color: #2C2C2C;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #f1c40f;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    padding-top: 20px;
+    width: 100%; /* Ensure it spans the full width */
+    border-top: 1px solid #444; /* Full-width border */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin-top: 20px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент страницы */
+main {
+    flex: 1;
+    background-color: #f4f4f4; /* Цвет фона */
+    padding: 20px;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* @media (max-width: 540px) and (min-width: 451px) {
+    footer {
+        padding: 10px 20px;
+    }
+
+    .footer-form input {
+        width: 100px;
+    }
+} */
+
+@media (max-width: 746px) {
+    .footer-container {
+        padding-right: 35px;
+        flex-direction: column; /* Размещаем секции в столбик */
+        align-items: center; /* Выравниваем секции по центру */
+        text-align: center; /* Центруем текст внутри секций */
+    }
+
+    .footer-section ul {
+        text-align: center; /* Центруем список */
+        padding: 0; /* Убираем лишние отступы */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px; /* Оставляем промежутки между ссылками */
+    }
+
+    .footer-section ul li a {
+        display: inline-block; /* Делаем ссылки блочными для центровки */
+        margin: 0 auto; /* Центрируем ссылки */
+    }
+
+    .footer-form {
+        display: flex;
+        flex-direction: column; /* Размещаем элементы в столбик */
+        align-items: center; /* Центруем их по горизонтали */
+        gap: 10px; /* Добавляем отступ между кнопкой и полем */
+    }
+    
+    .footer-form input {
+        width: 100%; /* Занимает всю доступную ширину родителя */
+        max-width: 300px; /* Устанавливаем максимальную ширину */
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    .footer-form button {
+        width: 100%; /* Кнопка будет такой же ширины, как input */
+        max-width: 150px; /* Устанавливаем максимальную ширину */
+        background: #f1c40f;
+        color: #2C2C2C;
+        border: none;
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .footer-form button:hover {
+        background: #e2b007;
+    }
+    
+    /* Текст под формой */
+    .footer-form-text {
+        text-align: center; /* Центрируем текст */
+        max-width: 280px; /* Устанавливаем максимальную ширину */
+        margin-top: 10px; /* Отступ от формы */
+        font-size: 12px; /* Сужаем текст */
+        color: #888; /* Более светлый цвет для текста */
+    }
+    
+    .footer-section p {
+        width: 345px;
+    }
+
+    .footer-section {
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="yandex-metrika.js"></script>
+    <style>
+body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center; /* Центрирование по горизонтали */
+            align-items: center;    /* Центрирование по вертикали */
+            height: 100vh;          /* Высота страницы на весь экран */
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стиль для блока */
+        .inputbuttonvvod {
+            background-color: #222; /* Темный фон */
+            width: 400px;           /* Фиксированная ширина */
+            height: 320px;          /* Фиксированная высота */
+            display: flex;          /* Включаем Flexbox */
+            flex-direction: column; /* Расположение элементов по вертикали */
+            justify-content: center; /* Центрирование по вертикали */
+            align-items: center;    /* Центрирование по горизонтали */
+            padding: 20px;
+            border-radius: 10px;    /* Закругленные углы */
+            box-shadow: 0 10px 10px rgb(0 0 0 / 60%) /* Тень */
+        }
+
+        .inputbuttonvvod input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #222; /* Фиксированная граница */
+            border-radius: 5px;
+            font-size: 16px;
+            background-clip: padding-box; /* Обеспечивает правильный отступ */
+            transition: box-shadow 0.3s ease; /* Плавный переход для обводки */
+        }
+
+        .inputbuttonvvod input:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 2px #ccc; /* Внутренняя обводка на расстоянии */
+        }
+
+
+
+        /* Стили для кнопки */
+        .inputbuttonvvod button {
+            width: 80%;            /* Ширина кнопки (меньше блока) */
+            padding: 10px;         /* Внутренний отступ текста */
+            margin-top: 10px;      /* Отступ сверху */
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF; /* Синий цвет */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Гладкий переход */
+        }
+
+        .inputbuttonvvod button:hover {
+            background-color: #0056b3; /* Темно-синий цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="inputbuttonvvod">
+        <input type="email" name="" id="mailInput" placeholder="Почта">
+        <input type="text" name="" id="NameInput" placeholder="Имя">
+        <input type="password" name="" id="PasswordInput" placeholder="Пароль">
+        <input type="number" name="" id="PhoneInput" placeholder="Номер">
+        <button id="registrationbutton">Зарегистрироваться</button>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html>

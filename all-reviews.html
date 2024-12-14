@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .review-card {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .review-card img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+        .review-card .text {
+            flex-grow: 1;
+        }
+        .review-card .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .review-card .date {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 5px;
+        }
+        .review-card .review {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .review-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .review-card img {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Отзывы клиентов</h1>
+    
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1">
+        <div class="text">
+            <div class="name">Иван Петров</div>
+            <div class="date">8 декабря 2024</div>
+            <div class="review">Отличная компания! Пользуюсь их услугами уже несколько месяцев и всегда доволен качеством обслуживания.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User 2">
+        <div class="text">
+            <div class="name">Мария Смирнова</div>
+            <div class="date">5 декабря 2024</div>
+            <div class="review">Очень качественный сервис! Понравилась скорость работы и внимание к деталям.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User 3">
+        <div class="text">
+            <div class="name">Дмитрий Иванов</div>
+            <div class="date">3 декабря 2024</div>
+            <div class="review">Я был приятно удивлен! Обслуживание на высшем уровне, рекомендую всем своим друзьям.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="Снимок экрана 2024-12-14 в 20.01.12.png" alt="User 4">
+        <div class="text">
+            <div class="name">Екатерина Белова</div>
+            <div class="date">1 декабря 2024</div>
+            <div class="review">Удобно, быстро, качественно. Я всегда довольна, когда использую их услуги. Приятно сотрудничать!</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="User 5">
+        <div class="text">
+            <div class="name">Александр Волков</div>
+            <div class="date">29 ноября 2024</div>
+            <div class="review">Очень доволен! Всегда быстрый ответ и отличное качество. Приятно иметь дело с такими людьми.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="User 6">
+        <div class="text">
+            <div class="name">Алиса Кузнецова</div>
+            <div class="date">27 ноября 2024</div>
+            <div class="review">Прекрасный сервис, который не разочаровывает. Заказы всегда приходят вовремя и в идеальном состоянии.</div>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="User 6">
+        <div class="text">
+            <div class="name">Николай Михайлов</div>
+            <div class="date">25 ноября 2024</div>
+            <div class="review">Превосходная компания с отличным обслуживанием. Рекомендую всем, кто ценит качество и надежность.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="User 7">
+        <div class="text">
+            <div class="name">Ольга Козлова</div>
+            <div class="date">22 ноября 2024</div>
+            <div class="review">Моя любимая компания! Всегда оперативно решают любые вопросы и всегда качественно выполняют работу.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="User 7">
+        <div class="text">
+            <div class="name">Петр Сергеев</div>
+            <div class="date">20 ноября 2024</div>
+            <div class="review">Сотрудничество с вами — это всегда приятный и эффективный опыт. Очень рад, что выбрал именно вашу компанию.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="User 8">
+        <div class="text">
+            <div class="name">Татьяна Лебедева</div>
+            <div class="date">17 ноября 2024</div>
+            <div class="review">Каждый раз получаю отличный сервис, всегда обращаюсь сюда, когда нужно что-то важное. Спасибо за вашу работу!</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="User 8">
+        <div class="text">
+            <div class="name">Владимир Соколов</div>
+            <div class="date">14 ноября 2024</div>
+            <div class="review">Отличная команда профессионалов. Каждый раз рад сотрудничать с вами — это всегда удовольствие и результат.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="User 9">
+        <div class="text">
+            <div class="name">Юлия Романова</div>
+            <div class="date">12 ноября 2024</div>
+            <div class="review">Я всегда доверяю вашей команде. Профессионалы своего дела, которые всегда выполняют работу в срок и с отличным качеством.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="User 9">
+        <div class="text">
+            <div class="name">Алексей Григорьев</div>
+            <div class="date">9 ноября 2024</div>
+            <div class="review">Пользуюсь услугами уже долгое время и всегда доволен. Очень профессиональная команда с отличным подходом к клиентам.</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="User 10">
+        <div class="text">
+            <div class="name">Анна Морозова</div>
+            <div class="date">6 ноября 2024</div>
+            <div class="review">Не первый раз заказываю у вас услуги, и всегда получаю отличный результат. Прекрасная работа и внимательное отношение к клиентам!</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="User 10">
+        <div class="text">
+            <div class="name">Максим Яковлев</div>
+            <div class="date">3 ноября 2024</div>
+            <div class="review">Очень рад, что выбрал вашу компанию. Все получилось быстро, качественно и без лишних вопросов. Рекомендую!</div>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="User 11">
+        <div class="text">
+            <div class="name">Ксения Крылова</div>
+            <div class="date">1 ноября 2024</div>
+            <div class="review">Работа с вами — это всегда удовольствие. Профессионализм и забота о клиентах на высшем уровне.</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

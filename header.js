@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Шаблон шапки с правильными путями
+    // Шаблон шапки с добавлением имени пользователя рядом с картинкой
     const headerHTML = `
         <div class="header_title">
-             <a href="/globa-site/index.html" id="home">
-               <p>Главная</p>
+            <a href="/globa-site/index.html" id="home">
+                <p>ГЛАВНАЯ</p>
             </a>
-             <a href="/globa-site/about.html" id="about">
-              <p class="about">О нас</p>
-           </a>
-           <a href="/globa-site/contact.html" id="contact">
-               <p>Связаться с нами</p>
-           </a>
-       </div>
+            <a href="/globa-site/about.html" id="about">
+                <p class="about">О НАС</p>
+            </a>
+            <a href="/globa-site/contact.html" id="contact">
+                <p>СВЯЗАТЬСЯ С НАМИ</p>
+            </a>
+            <a href="/globa-site/settings.html" id="settings">
+                <p>НАСТРОЙКИ</p>
+            </a>
+        </div>
 
-        <div class='block_image_header'>
-            <img id='header_ico_theme' src="icons8-солнце-200.png" alt="">
+        <div class="block_image_header">
+            <span id="user_name_display" class="user-name"></span>
+            <img id="header_ico_theme" src="icons8-солнце-200.png" alt="Тема">
         </div>
     `;
 
@@ -22,11 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerElement = document.querySelector('header');
     if (headerElement) {
         headerElement.innerHTML = headerHTML;
+    }
 
-        // Запускаем анимацию через небольшой таймаут
-        setTimeout(() => {
-            headerElement.classList.add('animate');
-        }, 100); // Задержка для срабатывания transition
+    // Проверяем наличие CommonUserData в localStorage
+    const commonUserData = localStorage.getItem('CommonUserData');
+    if (commonUserData) {
+        const parsedData = JSON.parse(commonUserData);
+        const userName = parsedData.name;  // Извлекаем имя из данных
+
+
+        // Создаем новый пункт меню "Подписка"
+        const subscriptionLink = document.createElement('a');
+        subscriptionLink.href = '/globa-site/subscription.html'; // Укажите путь к странице подписки
+        subscriptionLink.id = 'subscription';
+        subscriptionLink.innerHTML = '<p>Подписка</p>';
+
+        // Добавляем новый пункт меню в структуру
+        const headerTitle = document.querySelector('.header_title');
+        if (headerTitle) {
+            headerTitle.appendChild(subscriptionLink);
+        }
     }
 
     // Выделяем активную ссылку

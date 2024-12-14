@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Связь с нами</title>
     <link rel="stylesheet" href="style.css">
+    <script src="yandex-metrika.js"></script>
+    <link rel="stylesheet" href="footer.css">
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(to bottom, #f8f9fa, #e0e7ff);
+        }
+
+        .content-box {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 20px;
+            color: white;
+            background: #4CAF50;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .custom-button:hover {
+            background-color: #45a049;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header></header> <!-- Здесь будет вставлена шапка -->
-    
-    <main>
-        <h1>О нас</h1>
-        <p>Здесь будет информация о вашей компании или странице "О нас".</p>
+    <header>Добро пожаловать на нашу страницу</header>
+
+    <main id="main-content">
+        <div class="content-box">
+            <button class="custom-button" onclick="navigateTo('https://example.com/simple-projects')">Простые проекты</button>
+            <button class="custom-button" onclick="navigateTo('https://example.com/startup-projects')">Стартапы проекты</button>
+        </div>
     </main>
 
-    <script src="header.js"></script> <!-- Подключаем JavaScript файл -->
-    <script src="script.js"></script>
+    <footer>
+        &copy; 2024 Все права защищены.
+    </footer>
+
+    <script>
+        function navigateTo(url) {
+            const mainContent = document.getElementById('main-content');
+            // Добавляем класс анимации
+            mainContent.classList.add('fade-out');
+            // Переходим на новый сайт после завершения анимации
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // Длительность анимации 0.5с
+        }
+    </script>
 </body>
 </html>
